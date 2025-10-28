@@ -5,14 +5,14 @@
 
 ---
 
-## 🧠 Integrantes
+##  Integrantes
 - Thean Orlandi
 - Lucas Orellana
 - Angel Pino
 
 ---
 
-## 🚀 Descripción del proyecto
+##  Descripción del proyecto
 Este proyecto implementa **ejecución especulativa** en el lenguaje **Go**, utilizando **goroutines** y **canales** (`channels`) para manejar la concurrencia y la sincronización.  
 El objetivo fue comparar el rendimiento de una ejecución tradicional **secuencial** con una **especulativa**, donde ambas ramas de cómputo (A y B) se ejecutan en paralelo mientras se evalúa una condición costosa.
 
@@ -22,7 +22,7 @@ Cuando se determina el resultado de la condición, la rama correcta se mantiene 
 
 ---
 
-## ⚙️ Tecnologías y herramientas
+##  Tecnologías y herramientas
 - Lenguaje: **Go 1.20+**
 - Concurrencia: **Goroutines** y **Channels**
 - Sincronización y cancelación: **context.WithCancel**
@@ -31,18 +31,18 @@ Cuando se determina el resultado de la condición, la rama correcta se mantiene 
 
 ---
 
-## 🧩 Estructura del código
+##  Estructura del código
 ```
 control2/
 ├─ main.go               # Código principal (con todas las funciones y modos)
 ├─ go.mod                # Módulo Go
-├─ control2.exe          # Ejecutable generado (Windows)
+├─ control2.exe          # Ejecutable generado 
 ├─ bench_metrics.csv     # Resultados del benchmark
 ```
 
 ---
 
-## ▶️ Instrucciones de uso
+##  Instrucciones de uso
 
 ### Compilación
 ```bash
@@ -50,7 +50,7 @@ go mod init control2
 go build -o control2.exe main.go
 ```
 
-### Ejecución (Windows)
+### Ejecución 
 #### Modo especulativo
 ```bash
 .\control2.exe -mode spec -n 120 -umbral 800 -out spec_metrics.csv -pow_diff 5 -primes_max 50000
@@ -68,7 +68,7 @@ go build -o control2.exe main.go
 
 ---
 
-## 📊 Parámetros del programa
+##  Parámetros del programa
 | Parámetro | Descripción | Ejemplo |
 |------------|-------------|----------|
 | `-n` | Dimensión de matrices NxN para la traza (condición) | `120` |
@@ -81,7 +81,7 @@ go build -o control2.exe main.go
 
 ---
 
-## 🧮 Análisis de rendimiento
+##  Análisis de rendimiento
 
 Después de ejecutar el benchmark 30 veces por cada modo, se obtuvieron los siguientes resultados promedio:
 
@@ -91,14 +91,14 @@ Después de ejecutar el benchmark 30 veces por cada modo, se obtuvieron los sigu
 | **Especulativo** | 697.27 |
 | **Speedup (T_seq / T_spec)** | **0.99×** |
 
-### 📈 Interpretación
+###  Interpretación
 El resultado muestra un **Speedup ≈ 1**, lo que significa que el rendimiento de ambas estrategias fue prácticamente igual.  
 Esto ocurre porque la función de decisión (`CalcularTrazaDeProductoDeMatrices`) no tarda lo suficiente para que las ramas especulativas aprovechen tiempo extra antes de conocerse la condición.  
 En otras palabras, el tiempo adicional de coordinación (creación de goroutines y canales) iguala la posible ganancia.
 
 ---
 
-## 🧠 Conclusiones
+##  Conclusiones
 
 1. **El patrón especulativo funciona correctamente:**  
    - Las ramas A y B se ejecutan concurrentemente.  
@@ -112,13 +112,5 @@ En otras palabras, el tiempo adicional de coordinación (creación de goroutines
 3. **La cancelación controlada evita desperdicio de recursos**, garantizando que las goroutines terminen de forma ordenada.
 
 4. **El uso de goroutines y canales simplifica la paralelización**, demostrando la potencia del modelo de concurrencia de Go.
-
----
-
-## 📂 Entrega
-- Código fuente: `main.go`
-- Ejecutable: `control2.exe`
-- Archivo de resultados: `bench_metrics.csv`
-- Repositorio Git: 
 
 ---
