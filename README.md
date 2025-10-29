@@ -48,15 +48,15 @@ Análisis: Promedios y Speedup
 
 # Estructura del proyecto 
 
-1     control2/ 
+     control2/ 
 
-2     ├─ main.go               # Código principal (modos spec, seq, bench) 
+     ├─ main.go               # Código principal (modos spec, seq, bench) 
 
-3     ├─ go.mod                # Módulo Go 
+     ├─ go.mod                # Módulo Go 
 
-4     ├─ control2.exe          # Ejecutable generado 
+     ├─ control2.exe          # Ejecutable generado 
 
-5     ├─ bench_metrics.csv     # Resultados del benchmark 
+     ├─ bench_metrics.csv     # Resultados del benchmark 
 
       
 
@@ -66,29 +66,28 @@ Análisis: Promedios y Speedup
 
 # Compilación 
 
-1     go mod init control2 
+     go mod init control2 
 
-2     go build -o control2.exe main.go 
+     go build -o control2.exe main.go 
 
-3      
+      
 
 # Ejecución 
 
 # Modo especulativo 
 
-1     spec: .\control2.exe -mode spec -n 100 -umbral 500 
-
-2      
+     spec: .\control2.exe -mode spec -n 100 -umbral 500 
+      
 
 # Modo secuencial 
 
-1     sec: .\control2.exe -mode seq -n 100 -umbral 500 
+     sec: .\control2.exe -mode seq -n 100 -umbral 500 
 
-2      
+      
 
 # Benchmark (30 repeticiones automáticas) 
 
-1     .\control2.exe -mode bench -runs 30 -n 120 -umbral 800 -out bench_metrics.csv -pow_diff 5 -primes_max 50000 
+     .\control2.exe -mode bench -runs 30 -n 120 -umbral 800 -out bench_metrics.csv -pow_diff 5 -primes_max 50000 
 
       
 
