@@ -1,6 +1,6 @@
-Control 2 — Lenguajes de Programación II 
+ ## Control 2 — Lenguajes de Programación II 
 
-Tema: Ejecución Especulativa en Go 
+** Tema: Ejecución Especulativa en Go 
 
 Profesor: Alonso Inostrosa Psijas 
 
