@@ -62,7 +62,7 @@ Análisis: Promedios y Speedup
 
  
 
-# ▶ Instrucciones de uso 
+#  Instrucciones de uso 
 
 # Compilación 
 
