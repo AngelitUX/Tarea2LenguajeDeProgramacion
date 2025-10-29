@@ -113,4 +113,6 @@ En otras palabras, el tiempo adicional de coordinación (creación de goroutines
 
 4. **El uso de goroutines y canales simplifica la paralelización**, demostrando la potencia del modelo de concurrencia de Go.
 
+<img width="1200" height="750" alt="01_medias_beneficio" src="https://github.com/user-attachments/assets/568359b5-f3d2-4e4c-bbbc-601135e47e79" />
+
 ---
