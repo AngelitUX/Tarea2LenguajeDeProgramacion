@@ -100,12 +100,19 @@ Análisis: Promedios y Speedup
 Parámetro     Descripción                                 Ejemplo
 
 -n            Dimensión de matrices NxN para la traza     120
+
 -umbral       Umbral para decidir la rama ganadora        800
+
 -pow_diff     Dificultad del Proof of Work                5
+
 -primes_max   Límite superior para búsqueda de primos     50000
+
 -mode         Modo de ejecución (spec, seq, bench) bench
+
 -runs         Número de repeticiones en modo benchmark    30
+
 -out          Archivo CSV de salida con métricas bench_metrics.csv
+
 
  
 
