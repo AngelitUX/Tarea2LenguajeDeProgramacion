@@ -76,19 +76,19 @@ Análisis: Promedios y Speedup
 
 # Modo especulativo 
 
-1     ./control2.exe -mode spec -n 120 -umbral 800 -out spec_metrics.csv -pow_diff 5 -primes_max 50000 
+1     spec: .\control2.exe -mode spec -n 100 -umbral 500 
 
 2      
 
 # Modo secuencial 
 
-1     ./control2.exe -mode seq -n 120 -umbral 800 -out seq_metrics.csv -pow_diff 5 -primes_max 50000 
+1     sec: .\control2.exe -mode seq -n 100 -umbral 500 
 
 2      
 
 # Benchmark (30 repeticiones automáticas) 
 
-1     ./control2.exe -mode bench -runs 30 -n 120 -umbral 800 -out bench_metrics.csv -pow_diff 5 -primes_max 50000 
+1     .\control2.exe -mode bench -runs 30 -n 120 -umbral 800 -out bench_metrics.csv -pow_diff 5 -primes_max 50000 
 
       
 
