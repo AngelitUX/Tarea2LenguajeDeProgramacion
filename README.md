@@ -1,6 +1,6 @@
  ## Control 2 — Lenguajes de Programación II 
 
-*Tema: Ejecución Especulativa en Go 
+Tema: Ejecución Especulativa en Go 
 
 Profesor: Alonso Inostrosa Psijas 
 
@@ -8,7 +8,7 @@ Fecha de entrega: 28/10/2025
 
  
 
-👥 Integrantes 
+# Integrantes 
 
 Thean Orlandi 
 
@@ -18,13 +18,13 @@ Angel Pino
 
  
 
-📌 Descripción del proyecto 
+# Descripción del proyecto 
 
 Este proyecto implementa ejecución especulativa en el lenguaje Go, utilizando goroutines y canales para manejar la concurrencia y la sincronización. 
 
 El objetivo es comparar el rendimiento de una ejecución secuencial tradicional con una especulativa, donde ambas ramas de cómputo (A y B) se ejecutan en paralelo mientras se evalúa una condición costosa. 
 
-🔍 Concepto de ejecución especulativa 
+# Concepto de ejecución especulativa 
 
 Se lanzan tareas en paralelo antes de saber cuál será necesaria. 
 
@@ -32,7 +32,7 @@ Cuando se determina el resultado de la condición, la rama correcta se mantiene 
 
  
 
-🛠 Tecnologías y herramientas 
+# Tecnologías y herramientas 
 
 Lenguaje: Go 1.20+ 
 
@@ -46,7 +46,7 @@ Análisis: Promedios y Speedup
 
  
 
-📂 Estructura del proyecto 
+# Estructura del proyecto 
 
 1     control2/ 
 
@@ -62,9 +62,9 @@ Análisis: Promedios y Speedup
 
  
 
-▶ Instrucciones de uso 
+# Instrucciones de uso 
 
-✅ Compilación 
+# Compilación 
 
 1     go mod init control2 
 
@@ -72,7 +72,7 @@ Análisis: Promedios y Speedup
 
 3      
 
-✅ Ejecución 
+# Ejecución 
 
 Modo especulativo 
 
@@ -94,7 +94,7 @@ Benchmark (30 repeticiones automáticas)
 
  
 
-⚙ Parámetros del programa 
+# Parámetros del programa 
 
 Parámetro 
 
@@ -146,7 +146,7 @@ bench_metrics.csv
 
  
 
-📊 Análisis de rendimiento 
+# Análisis de rendimiento 
 
 Después de ejecutar el benchmark con 30 repeticiones por modo, se obtuvieron los siguientes resultados promedio: 
 
